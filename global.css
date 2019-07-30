@@ -110,6 +110,7 @@ img {
 
 .header .navigation a {
   color: #ce3d2b;
+  text-decoration: none;
 }
 
 .nav-cta {
@@ -184,6 +185,7 @@ img {
   vertical-align: middle;
   position: relative;
   box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
 .modal-content input[type=submit]:hover {
@@ -197,10 +199,10 @@ img {
 .close-modal {
   color: #aaa;
   float: right;
-  font-size: 30px;
+  font-size: 1.8em;
   transition: .3s all;
   position: relative;
-  top: -17px;
+  top: -.5em;
 }
 
 .close-modal:focus, .close-modal:hover {
@@ -636,33 +638,56 @@ img {
 }
 
 .btf-3 .logo-farm {
-  padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
-  background: #fff;
+  /* padding: 20px; */
+  margin-top: 20px;
+  /* box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  background: #fff; */
 }
 
 .btf-3 .logo-farm .grid-item {
   display: flex;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 980px) {
     .btf-3 .logo-farm .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 2fr);
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
   
   .btf-3 .logo-farm .grid-item img {
     max-width: 100%;
     max-height: 160px;
     margin: auto;
+    filter: invert(1) grayscale(1) brightness(1000%);
+  }
+
+  .btf-3 .logo-farm .grid-item:hover  {
+    background: #fff;
+    transition: .3s all;
+    box-shadow: 0px 15px 50px rgba(0,0,0,0.1);
+  }
+
+  /*.btf-3 .logo-farm .grid-item .logo-text-box {
+    display: none;
+    transition: .3s all;
+  }
+
+  .btf-3 .logo-farm .grid-item:hover .logo-text-box {
+    display: block;
+    transition: .3s all;
+  }*/
+
+  .btf-3 .logo-farm .grid-item:hover img {
+    filter: none;
   }
 }
 
 @media screen and (max-width: 979px) {
   .btf-3 .logo-farm .grid-container {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 4fr);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     display: grid;
@@ -671,6 +696,34 @@ img {
     max-width: 100%;
     max-height: 120px;
     margin: auto;
+  }
+
+  .btf-3 .logo-farm .grid-item img {
+    max-width: 100%;
+    max-height: 160px;
+    margin: auto;
+    filter: invert(1) grayscale(1) brightness(1000%);
+  }
+
+  .btf-3 .logo-farm .grid-item:hover  {
+    background: #fff;
+    border-radius: 5px;
+    transition: .3s all;
+    box-shadow: 0px 15px 50px rgba(0,0,0,0.1);
+  }
+
+  /*.btf-3 .logo-farm .grid-item .logo-text-box {
+    display: none;
+    transition: .3s all;
+  }
+
+  .btf-3 .logo-farm .grid-item:hover .logo-text-box {
+    display: block;
+    transition: .3s all;
+  }*/
+
+  .btf-3 .logo-farm .grid-item:hover img {
+    filter: none;
   }
 }
 
@@ -888,6 +941,7 @@ img {
   vertical-align: middle;
   position: relative;
   box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
 .footer input[type=submit]:hover {
